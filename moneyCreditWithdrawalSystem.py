@@ -21,11 +21,16 @@ class moneyCreditWithdrawlSystem:
         else : 
             print("Entrance process retries exceeded over 3 times. Unfortunately we can't process your request due to incorrect input")        
 
-
+# Defining a main Function.
+# The project process starts from here
 if __name__ == '__main__':
+    # Printing Welcome messages to user 
     print('Hi,Welcome to Money Credit Witdral System')
     print('I am assesting for credit and withdrawl money from your bank account')
 
+    # Creating a object for "moneyCreditWithdrawlSystem" class
     main_object = moneyCreditWithdrawlSystem()
+    # Assigning a "entrance_retry" variable to control  wrong information from user at entrance process
     main_object.entrance_retry = 0
+    #
     main_object.entrance_process_init()
