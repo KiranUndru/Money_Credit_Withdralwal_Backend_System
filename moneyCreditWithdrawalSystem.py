@@ -35,7 +35,7 @@ class moneyCreditWithdrawlSystem:
                 if self.entrance_retry != 3:
                     print("Please enter correct entrance process number as 1 or 2")
                 self.entrance_process_init()
-                
+                ##
         else : 
             print("Entrance process retries exceeded over 3 times. Unfortunately we can't process your request due to incorrect input")        
             
