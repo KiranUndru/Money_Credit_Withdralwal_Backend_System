@@ -14,7 +14,7 @@ class Registration:
         try :
                 age = input("Please enter your age: ")
                 data_validation.validate_age(age)
-                
+                ##
         except data_validation.ValidationError as e:
                 print(f"""Error: {e}. Please try again. 
                       Age must be a numeric value. 
