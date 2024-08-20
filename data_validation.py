@@ -53,7 +53,7 @@ def validate_email(email,allowed_domains,pattern):
 
 def validate_dob(dob: str):
     try:
-        # Attempt to parse the date with the expected format
+        #Attempt to parse the date with the expected format
         datetime.strptime(dob, '%d/%m/%Y')
         return True
     except ValueError:
