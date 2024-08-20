@@ -82,3 +82,4 @@ if __name__ == '__main__':
     main_object.entrance_retry = 0
     # Calling the entrance process method.
     main_object.entrance_process_init()
+    #
