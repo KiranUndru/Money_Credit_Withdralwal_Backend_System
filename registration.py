@@ -25,7 +25,7 @@ class Registration:
             except Exception as e:
                 print(f"An unexpected error occurred: {e}. Please try again.")
         
-        # Collect a valid Last name
+        #Collect a valid Last name
         while True:
             try:
                 last_name  = input('Please enter your last name: \n')
