@@ -16,10 +16,13 @@ class Login:
                 isEmailValid = data_validation.validate_email(email,allowed_domains,email_pattern)
                 isPassValid = data_validation.validate_password(password)
                 if isEmailValid and isPassValid:
-                    print(f"user logged in successfully..")
+                    print(f"User logged in successfully..")
+                    return True
             except ValueError as ve:
                     print(f"Error: user id and pasword incorrect.")
+                    return False
             except Exception as e:
                     print(f"Error: user id and pasword incorrect.")
+                    return False
         
         

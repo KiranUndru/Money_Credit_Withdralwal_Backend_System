@@ -8,6 +8,7 @@ import util
 class moneyCreditWithdrawSystem:
     # Constructor for the moneyCreditWithdrawSystem class.
     def __init__(self):
+        self.login_session = False
         pass
     
     # Method to initialize the entrance process.
@@ -39,13 +40,17 @@ class moneyCreditWithdrawSystem:
                 # print("Navigating to Registration")
                 registration_obj=Registration()
                 registration_obj.collecting_registration_input()
-                util.save_registration_data(registration_obj.registration_details)
-                #if registration_status :
-                    #pass 
+                registration_status = util.save_registration_data(registration_obj.registration_details)
+                if not registration_status :
+                    print(f"Registration failed the email {registration_obj.registration_details['email']} is already existed ")
+                    return False
+                print("Your registration process has been succeeded.Now, navigating to login prcess")
+                login_obj=Login()
+                self.login_session = login_obj.login_with_credentials()
             # Navigate to Login process if the user selects option 2.
             elif self.enter_process == 2:
                 login_obj=Login()
-                login_obj.login_with_credentials()
+                self.login_session = login_obj.login_with_credentials()
             # If the user enters an invalid option, prompt them to choose again.
             else:
                  # Increment the retry counter.

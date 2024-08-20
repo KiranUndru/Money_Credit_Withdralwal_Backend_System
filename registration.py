@@ -121,14 +121,7 @@ class Registration:
                 print(f"An unexpected error occurred: {e}. Please try again.")
     
                 
-        print(f"""
-            First Name: {first_name}
-            Last Name: {last_name}
-            Age:{age}
-            Email Address: {email}
-            Date of Birth: {dob}
-            Password: {password}
-            """)
+        
         
     
     
