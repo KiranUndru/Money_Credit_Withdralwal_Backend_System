@@ -7,7 +7,7 @@ class Login:
 
     def login_with_credentials(self):
             allowed_domains = ["gmail", "yahoo"]
-            # Regex pattern to check for a valid email structure
+            #Regex pattern to check for a valid email structure
             email_pattern =r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
             
             try:
