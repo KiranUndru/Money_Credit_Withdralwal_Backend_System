@@ -3,7 +3,7 @@ import os
 import data_validation as dv
 
 def save_registration_data(registration_data):
-    # Path to the existing CSV file
+    #Path to the existing CSV file
     csv_file = 'data.csv'
     existed_record = dv.check_user_id_existance(csv_file, registration_data['email'])
     print(type(existed_record))
